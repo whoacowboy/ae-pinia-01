@@ -1,9 +1,9 @@
-import Component from './components/Component.vue'
+import AePinia01 from './components/AePinia01.vue'
 
 const version = __UI_VERSION__
 
 function install(app) {
-  app.component(Component.name, Component)
+  app.component(AePinia01.name, AePinia01)
 }
 
-export { version, Component, install }
+export { version, AePinia01, install }

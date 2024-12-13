@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <PiniaInDev /><br />
+    <AePinia01 /><br />
     {{ devCounter }}
     <q-btn @click="devCounterStore.increment()" label="Increase Dev" />
   </q-page>
