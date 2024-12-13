@@ -1,4 +1,4 @@
-import { defineStore } from 'pinia'
+import { defineStore, getActivePinia } from 'pinia'
 
 export const useComponentCounterStore = defineStore('component-counter', {
   state: () => ({

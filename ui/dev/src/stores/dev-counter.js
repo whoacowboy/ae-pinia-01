@@ -1,5 +1,9 @@
-import { defineStore } from "pinia";
-
+import { defineStore, getActivePinia } from "pinia";
+export const getStore = (name) => {
+  const store = getActivePinia()?._s.get(name);
+  if (!store) throw new Error(`${name} store does not exist`);
+  return store;
+};
 export const useDevCounterStore = defineStore("dev-counter", {
   state: () => ({
     counter: 0,
@@ -14,6 +18,8 @@ export const useDevCounterStore = defineStore("dev-counter", {
   actions: {
     increment() {
       this.counter++;
+      const s = getStore("component-counter");
+      s.increment();
     },
   },
 });
